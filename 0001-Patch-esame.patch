@@ -1,0 +1,25 @@
+From a60a737b28bdc3bff97cf32e8e5a258bf019e6e3 Mon Sep 17 00:00:00 2001
+From: Luca Miccio <lucmiccio@gmail.com>
+Date: Wed, 29 Dec 2021 12:27:20 +0100
+Subject: [PATCH] Patch esame
+
+Signed-off-by: Luca Miccio <lucmiccio@gmail.com>
+---
+ kernel/smp.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/kernel/smp.c b/kernel/smp.c
+index 52bf159ec400..20c5eb34e009 100644
+--- a/kernel/smp.c
++++ b/kernel/smp.c
+@@ -1091,6 +1091,7 @@ void __init smp_init(void)
+ 
+ 	num_nodes = num_online_nodes();
+ 	num_cpus  = num_online_cpus();
++	pr_info("Level 1 of RTES project\n");
+ 	pr_info("Brought up %d node%s, %d CPU%s\n",
+ 		num_nodes, (num_nodes > 1 ? "s" : ""),
+ 		num_cpus,  (num_cpus  > 1 ? "s" : ""));
+-- 
+2.17.1
+
